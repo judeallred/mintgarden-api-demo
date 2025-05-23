@@ -1,0 +1,18 @@
+{
+  "name": "mintgarden-openapi-demo",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "deno run --allow-net src/example.ts",
+    "generate-live": "openapi-typescript https://api.mintgarden.io/openapi.json -o src/mintgarden.d.ts",
+    "generate": "openapi-typescript mintgarden-openapi-1.0.0.json -o src/mintgarden.d.ts"
+  },
+  "devDependencies": {
+    "deno": "^2.3.3",
+    "openapi-typescript": "^7.8.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "openapi-fetch": "^0.14.0"
+  }
+}
